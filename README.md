@@ -13,5 +13,9 @@ Alzhiemer's GWAS dataset can be download here: http://web.pasteur-lille.fr/en/re
 
 mQTL maps from cord blood can be download here: http://www.mqtldb.org/
 
+The scripts to run regressions in R are provided in EWAS_regressions_github.R
+
+The scripts to run enrichment in R are provided in EWAS_enrichment_github.R
+
 
 
