@@ -54,9 +54,9 @@ t.test(x2$P, y2$P, alternative = "less")
 
 #Step 3a: Count the number of SNPs that map onto each CpG
 
-count1 = count(merged2, SNP)
+count1 = count(merged2, "SNP")
 merged2 = merge(merged2, count1, by = "SNP")
-setnames(merged2, "n", "SNPcount")
+setnames(merged2, "freq", "SNPcount")
 
 
 #Step 3b: create bins
