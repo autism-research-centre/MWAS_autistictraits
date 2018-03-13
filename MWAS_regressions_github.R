@@ -1,7 +1,7 @@
 ---
 title: "Two_step_regression_MWAS"
 author: "H Brunel"
-date: "1/7/2018"
+date: "1/7/2017"
 ---
 
 #The following script aims to run an MWAS with a two step strategy consisting on two regression models
