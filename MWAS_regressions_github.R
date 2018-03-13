@@ -15,7 +15,7 @@ load("data_QC.Rdata") #load the ALSPAC data already pre-processed as data_QC.
 dinfo<-data_QC[,c("Sample_Name", names(data_QC)[482857:482885])]
 cpg <- data_QC[, c(names(data_QC)[2:482856])]
 
-t1<- Sys.time()
+
 #first regression model: 
 #normalized methylation probes (betas) against against technical covariates: slide, sample type, and plates and cell counts (Bcell, CD4T, CD8T, Gran, Mono, NK). 
 model <- apply(cpg, 2, function(x) 
@@ -30,9 +30,6 @@ model <- apply(cpg, 2, function(x)
                  dinfo[,'BCD_plate'] +
                  dinfo[,'Slide'])))
 
-#second regression model: scdc scores against residuals from first model and with sex and the first two genetic principal components as covariates.
-     
+#second regression model: scdc scores against residuals from first model and with sex and the first two genetic principal components as covariates.     
 m2.model = apply(model, 2, function(x) summary(glm.nb(dinfo$scdc.score ~ x + dinfo$Sex.x + dinfo$PC1 + dinfo$PC2))$coefficients[2,])
 
-t2 <- Sys.time()
-t<- t2-t1
