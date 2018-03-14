@@ -6,8 +6,11 @@ date: "1/7/2017"
 
 #The following script aims to run an MWAS with a two step strategy consisting on two regression models
 #Email hb493@medschl.cam.ac.uk if you have any queries
-#The whole procedure takes approximately 12 hours to run on a single-thread and requires a maximum of 20GB 
-  
+#The whole procedure takes approximately 14.5 hours to run on a single-thread and requires a maximum of 20GB 
+
+
+library(MASS)
+
 load("data_QC.Rdata") #load the ALSPAC data already pre-processed as data_QC.
 
 
