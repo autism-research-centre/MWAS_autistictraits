@@ -1,6 +1,6 @@
 ---
 title: "MWAS_autism_SCDCanalysis"
-author: "V_warrer"
+author: "V_warrier"
 date: "1/7/2018"
 ---
 
