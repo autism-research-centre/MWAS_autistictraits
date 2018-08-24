@@ -19,6 +19,8 @@ library(data.table)
 library(dplyr)
 library (plyr)
 
+#ensure plyr is loaded after dplyr
+
 load("SCDCnegbin.RData") #read the mwas data as merged3 
 setnames(merged3, "name", "gene") #change name for further merging
 merged1 = merged3[,c("gene", "beta_scdc", "pval_scdc", "se_scdc")] #keep only necessary columns
